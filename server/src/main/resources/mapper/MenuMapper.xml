@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javbus.server.mapper.MenuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.javbus.server.dao.entity.Menu">
+        <id column="id" property="id" />
+        <result column="url" property="url" />
+        <result column="level" property="level" />
+        <result column="parent_id" property="parentId" />
+        <result column="created_date" property="createdDate" />
+        <result column="created_by" property="createdBy" />
+        <result column="updated_date" property="updatedDate" />
+        <result column="updated_BY" property="updatedBy" />
+        <collection property="childMenu" column="parent_id" select="findChileMenuByParentId">
+        </collection>
+    </resultMap>
+    <select id="findChileMenuByParentId" resultType="com.javbus.server.dao.entity.Menu">
+    	select * from menu where parent_id = #{parent_id}
+    </select>
+
+	<!-- <select id="selectAll" resultMap="BaseResultMap">
+		select * from menu
+	</select> -->
+</mapper>
