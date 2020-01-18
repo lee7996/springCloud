@@ -71,9 +71,10 @@
 
 		<!-- Druid数据源 提供连接池的功能，还提供监控功能，可以实时查看数据库连接池和SQL查询的工作情况-->
 		<dependency>
-		   <groupId>com.alibaba</groupId>
-		   <artifactId>druid-spring-boot-starter</artifactId>
-		   <version>1.1.6</version>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>druid-spring-boot-starter</artifactId>
+		    <version>1.1.21</version>
 		</dependency>
+
 	</dependencies>
 </project>
