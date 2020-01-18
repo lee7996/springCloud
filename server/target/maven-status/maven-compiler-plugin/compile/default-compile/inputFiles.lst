@@ -1,3 +1,10 @@
 E:\project_springCloud\server\src\main\java\com\javbus\server\App.java
+E:\project_springCloud\server\src\main\java\com\javbus\server\dao\entity\Menu.java
+E:\project_springCloud\server\src\main\java\com\javbus\server\service\impl\MenuServiceImpl.java
 E:\project_springCloud\server\src\main\java\com\javbus\server\controller\HellowController.java
+E:\project_springCloud\server\src\main\java\com\javbus\server\utils\MybatisGanerator.java
+E:\project_springCloud\server\src\main\java\com\javbus\server\mapper\MenuMapper.java
 E:\project_springCloud\server\src\main\java\com\javbus\server\ServerApplication.java
+E:\project_springCloud\server\src\main\java\com\javbus\server\service\MenuService.java
+E:\project_springCloud\server\src\main\java\com\javbus\server\controller\MenuController.java
+E:\project_springCloud\server\src\main\java\com\javbus\server\config\MyBatisPlusConfig.java

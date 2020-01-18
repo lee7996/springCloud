@@ -1,0 +1,12 @@
+com\javbus\server\dao\entity\Menu.class
+com\javbus\server\service\impl\MenuServiceImpl.class
+com\javbus\server\config\MyBatisPlusConfig.class
+com\javbus\server\ServerApplication.class
+com\javbus\server\utils\MybatisGanerator$1.class
+com\javbus\server\controller\MenuController.class
+com\javbus\server\controller\HellowController.class
+com\javbus\server\App.class
+com\javbus\server\service\MenuService.class
+com\javbus\server\utils\MybatisGanerator$2.class
+com\javbus\server\utils\MybatisGanerator.class
+com\javbus\server\mapper\MenuMapper.class
