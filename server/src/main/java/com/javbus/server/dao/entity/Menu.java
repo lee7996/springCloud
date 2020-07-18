@@ -49,7 +49,6 @@ public class Menu extends Model<Menu> {
     @TableField(exist = false)
     private List<Menu> childMenu;
 
-    @TableField("updated_BY")
     private LocalDateTime updatedBy;
 
 
@@ -58,95 +57,4 @@ public class Menu extends Model<Menu> {
         return this.id;
     }
 
-
-	public Integer getId() {
-		return id;
-	}
-
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-
-	public String getUrl() {
-		return url;
-	}
-
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-
-	public String getLevel() {
-		return level;
-	}
-
-
-	public void setLevel(String level) {
-		this.level = level;
-	}
-
-
-	public Integer getParentId() {
-		return parentId;
-	}
-
-
-	public void setParentId(Integer parentId) {
-		this.parentId = parentId;
-	}
-
-
-	public LocalDateTime getCreatedDate() {
-		return createdDate;
-	}
-
-
-	public void setCreatedDate(LocalDateTime createdDate) {
-		this.createdDate = createdDate;
-	}
-
-
-	public String getCreatedBy() {
-		return createdBy;
-	}
-
-
-	public void setCreatedBy(String createdBy) {
-		this.createdBy = createdBy;
-	}
-
-
-	public LocalDateTime getUpdatedDate() {
-		return updatedDate;
-	}
-
-
-	public void setUpdatedDate(LocalDateTime updatedDate) {
-		this.updatedDate = updatedDate;
-	}
-
-
-	public List<Menu> getChildMenu() {
-		return childMenu;
-	}
-
-
-	public void setChildMenu(List<Menu> childMenu) {
-		this.childMenu = childMenu;
-	}
-
-
-	public LocalDateTime getUpdatedBy() {
-		return updatedBy;
-	}
-
-
-	public void setUpdatedBy(LocalDateTime updatedBy) {
-		this.updatedBy = updatedBy;
-	}
-
-    
 }

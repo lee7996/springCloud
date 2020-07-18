@@ -4,6 +4,7 @@ Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Lee
 Implementation-Vendor-Id: com.javbus
 Build-Jdk: 1.8.0_161
-Implementation-URL: http://maven.apache.org
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/demo/common
 Created-By: Maven Integration for Eclipse
 

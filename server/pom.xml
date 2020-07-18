@@ -9,23 +9,22 @@
 		<artifactId>demo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	
 	<artifactId>server</artifactId>
-	<name>server</name>
-	<url>http://maven.apache.org</url>
+	<packaging>jar</packaging>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
-
+		<dependency>
+			<groupId>com.javbus</groupId>
+			<artifactId>common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -69,12 +68,39 @@
 			<artifactId>freemarker</artifactId>
 		</dependency>
 
-		<!-- Druid数据源 提供连接池的功能，还提供监控功能，可以实时查看数据库连接池和SQL查询的工作情况-->
+		<!-- Druid数据源 提供连接池的功能，还提供监控功能，可以实时查看数据库连接池和SQL查询的工作情况 -->
 		<dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>druid-spring-boot-starter</artifactId>
-		    <version>1.1.21</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.21</version>
 		</dependency>
 
+		<!-- gateway -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<version>2.1.1.RELEASE</version>
+			<exclusions>
+		        <exclusion>
+		            <groupId>org.springframework.boot</groupId>
+		            <artifactId>spring-boot-starter-web</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>org.springframework.boot</groupId>
+		            <artifactId>spring-boot-starter-webflux</artifactId>
+		        </exclusion>
+   			</exclusions>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>2.6</version>
+		</dependency>
+		<!-- security身份认证、访问控制框架依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 	</dependencies>
 </project>

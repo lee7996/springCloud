@@ -8,12 +8,16 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>services</artifactId>
-  <name>services</name>
-  <url>http://maven.apache.org</url>
+  <packaging>jar</packaging>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+  	<dependency>
+  	  <groupId>com.javbus</groupId>
+  	  <artifactId>common</artifactId>
+  	  <version>${project.version}</version>
+  	</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

@@ -3,6 +3,7 @@ package com.javbus.server.utils;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
@@ -31,16 +32,18 @@ public class MybatisGanerator {
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
         // TODO 设置用户名
-        gc.setAuthor("yuan");
+        gc.setAuthor("Lee");
         gc.setOpen(true);
         // service 命名方式
         gc.setServiceName("%sService");
         // service impl 命名方式
         gc.setServiceImplName("%sServiceImpl");
+        gc.setIdType(IdType.AUTO); // 主键策略
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
         gc.setMapperName("%sMapper");
         gc.setXmlName("%sMapper");
-        gc.setFileOverride(true);
+        gc.setEntityName("%sDTO");
+        gc.setFileOverride(true); //文件覆盖
         gc.setActiveRecord(true);
         // XML 二级缓存
         gc.setEnableCache(false);
@@ -52,10 +55,10 @@ public class MybatisGanerator {
 
         // TODO 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/springclouddemo?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://120.77.26.145:3306/springclouddemo?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
+        dsc.setPassword("CH30499213");
         mpg.setDataSource(dsc);
 
         // TODO 包配置
@@ -102,13 +105,15 @@ public class MybatisGanerator {
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setNaming(NamingStrategy.underline_to_camel);
+        strategy.setNaming(NamingStrategy.underline_to_camel); // 数据库表映射到实体的命名策略
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
+//        strategy.setCapitalMode(true);  全局大写
         // 设置逻辑删除键
         strategy.setLogicDeleteFieldName("deleted");
         // TODO 指定生成的bean的数据库表名
-        strategy.setInclude("menu");
+        strategy.setInclude("obp_role");
+        strategy.setTablePrefix("obp_");
         //strategy.setSuperEntityColumns("id");
         // 驼峰转连字符
         strategy.setControllerMappingHyphenStyle(true);

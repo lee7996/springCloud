@@ -3,6 +3,10 @@
 	<name>demo</name>
 	<comment></comment>
 	<projects>
+		<project>common</project>
+		<project>server</project>
+		<project>services</project>
+		<project>user-manager</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
