@@ -1,6 +1,10 @@
 server: 
   port: 8080
-  context-path: /springboot
+  servlet:
+    context-path: /springboot
+  data:
+    rest:
+      base-path: /REST
 
 spring:
   datasource:
@@ -84,7 +88,41 @@ spring:
         min-idle: 0
     # 连接超时时间（毫秒）
     timeout: 5000
-    
+
+  # Artemis 本地开发时无需配置
+#  artemis:
+#    host: 120.77.26.145
+#    port: 61616
+#    user: admin
+#    password: admin
+    # Artemis 默认目的地
+  jsm:
+    template:
+      default-destination: menu.queue
+
+  # RabbitMQ 本地开发时无需配置
+#  rabbitmq:
+#    addresses:
+#    host: 120.77.26.145
+#    port: 5672
+#    username: admin
+#    password: admin
+  # RabbitMQ 默认交易所、路由地址
+  rabbitmq:
+    template:
+      exchange: menu.topic
+      routing-key: menu.touting
+
+  # Kafka 本地开发无需配置
+#  kafka:
+#    bootstrap-servers:
+#    - 120.77.26.145:9092
+#    - 120.77.26.146:9093
+  # Kafka 默认主题
+  kafka:
+    template:
+      default-topic: menu.kafka.topic
+
 mybatis-plus:
   global-config:
     db-config:

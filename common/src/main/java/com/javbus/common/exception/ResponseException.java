@@ -1,7 +1,9 @@
 package com.javbus.common.exception;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class ResponseException extends RuntimeException {
 

@@ -8,6 +8,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -19,12 +22,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements MenuService {
 
-	@Autowired
-	MenuMapper mapper;
+	@Resource
+	MenuMapper menuMapper;
+
 	@Override
-	public Object getMenuTree() {
+	public List<Menu> getMenuTree() {
 		// TODO Auto-generated method stub
-		return mapper.selectList(null);
+		return menuMapper.selectList(null);
 	}
 
+	@Override
+	public Menu menuById(String id) {
+		return menuMapper.selectById(Long.valueOf(id));
+	}
 }

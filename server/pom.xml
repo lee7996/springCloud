@@ -27,12 +27,6 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.60</version>
-		</dependency>
-
 		<!--mysql驱动包 -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -44,11 +38,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<version>${spring-web.version}</version>
 		</dependency>
 
 		<dependency>
@@ -98,9 +87,52 @@
 		    <version>2.6</version>
 		</dependency>
 		<!-- security身份认证、访问控制框架依赖 -->
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>backport-util-concurrent</groupId>
+			<artifactId>backport-util-concurrent</artifactId>
+			<version>3.1</version>
+			<scope>test</scope>
+		</dependency>-->
+
+		<!-- 超媒体依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+			<version>2.1.5.RELEASE</version>
+		</dependency>
+		<!-- 超媒体依赖 end -->
+
+		<!-- Spring Data REST start Spring Data 创建的repository自动生成REST API 且自带超媒体连接-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<!-- Spring Data REST end -->
+
+		<!-- Artemis MQ start-->
+		<!--<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-artemis</artifactId>
+		</dependency>-->
+		<!-- Artemis MQ end-->
+
+		<!-- RabbitMQ start -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+		<!-- RabbitMQ end -->
+
+		<!-- Kafka start -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+		<!-- Kafka end -->
 	</dependencies>
 </project>

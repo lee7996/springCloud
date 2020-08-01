@@ -19,6 +19,7 @@
 		<module>services</module>
 		<module>user-manager</module>
 		<module>common</module>
+		<module>lletcode</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
@@ -54,10 +55,10 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<!-- redis 集成 -->
 		<!-- <dependency> <groupId>org.springframework.data</groupId> <artifactId>spring-data-redis</artifactId> 
@@ -134,6 +135,12 @@
         </dependency>
 		<!-- xml转对象 end -->
 
+		<!-- ActiveMQ start-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-artemis</artifactId>
+		</dependency>
+		<!-- ActiveMQ end-->
 	</dependencies>
 
 
