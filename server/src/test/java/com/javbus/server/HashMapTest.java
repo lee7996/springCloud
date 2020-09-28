@@ -64,13 +64,14 @@ public class HashMapTest {
 	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 以上为controller测试
 	
 	public static void main(String[] args) {
-		Map<String, String> map = new HashMap<>();
+		Map<String, String> map = new HashMap<>(5);
+		System.out.println("befor: " + map.size());
 		map.put("1", "value1");
+		System.out.println("after: " + map.size());
 		map.put("2", "value2");
 		map.put("3", "value3");
 		map.put("4", "value4");
 		map.put(null, null);
-		
 		// 迭代器 EntrySet
 		System.out.println("EntrySet >>>>>>>>>>>>>");
 		Iterator<Map.Entry<String, String>> iterES = map.entrySet().iterator();
